@@ -1,0 +1,16 @@
+// scss file
+
+/* ====== index =====
+1. COMMON
+2. ASIDE
+3. HOME
+
+
+===================== */
+@import 'partials/mixins';
+@import 'partials/variables';
+@import 'partials/media-query';
+@import 'reset';
+@import 'common';
+@import 'aside';
+@import 'home';

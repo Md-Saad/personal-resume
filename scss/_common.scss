@@ -1,0 +1,23 @@
+/*=== 1.COMMON ===*/
+
+.container {
+  width: 100%;
+  @include mobile {
+    width: 450px;
+  }
+  @include tablet {
+    width: 750px;
+  }
+  @include desktops {
+    width: 970px;
+  }
+  @include large-desktops {
+    width: 1170px;
+  }
+}
+.wrapper{
+  position: relative;
+  background: $light-bg;
+  margin: $margin * 5 0;
+  @include box-shadow(0px, 0px, 10px, rgba(0, 0, 0, .2));
+}

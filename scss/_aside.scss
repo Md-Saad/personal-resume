@@ -1,0 +1,94 @@
+/*=== 2. ASIDE ===*/
+%proflie-info-title{
+  color: $text-link;
+  font-size: $font-size * 1.8;
+  padding-bottom: $padding ;
+}
+aside{
+  .profile-area{
+    position: relative;
+    .profile-thumbnail{
+      text-align: center;
+      padding-bottom: $padding * 3;
+      position: relative;
+      z-index: 11;
+      img{
+        width:100%;
+      }
+      .profile-caption{
+        padding: $padding *3 0;
+        
+        h2{
+          color: $text-color-light;
+          font-size: $font-size * 3;
+        }
+        p{
+          color: $text-color-light;
+          font-size: $font-size * 1.5;
+        }
+      }
+      &:after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 200px;
+        height: 300px;
+        background-color: $secondary-color;;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        z-index: -1;
+        left: 0;
+        bottom: 0;
+      }
+    }
+    .profile-info{
+      position: relative;
+      padding: $padding * 12 10% $padding * 10;
+      background-color: $dark-bg;
+      border-radius: 180px;
+      margin-top: -$margin * 3.5;
+      .profile-info-body{
+        margin-bottom: $margin * 3;
+        span{
+          font-size: $font-size * 2;
+          width: 10%;
+          margin-right: 0;
+          color: $icon-color;
+        }
+        .profile-info-desc{
+          width: 90%;
+          margin-right: 0;
+          padding-left: $padding * 1.5;
+          .proflie-info-title{
+            @extend %proflie-info-title;
+          }
+        }
+        
+      }
+    }
+  }
+  .more-info{
+    margin: $margin * 5 0;
+    h4{
+      @extend %proflie-info-title;
+      padding-bottom: $padding * 1.5;
+    }
+    .more-info-body{
+      ul{
+        li{
+          span{
+            color: $dot-color;
+          }
+            &.complete{
+            span{
+              color: $text-link;
+            }
+          }
+        }
+      }
+    }
+    div[class^="col-"]{
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,194 @@
+/*================= 3. HOME ==================*/
+%subtitle{
+  color: $text-color-3;
+    font-size: $font-size * 3;
+    font-weight: 300;
+    margin-bottom: $margin  * 3;
+}
+.page-header{
+  margin:0 0 $margin * 2;;
+  border: none;
+  .page-title{
+    font-size: $font-size * 9;
+    font-weight: 700;
+    @include linear-gradient($title-bg, $light-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include mobile-xs{
+      font-size: $font-size * 4;
+    }
+  }
+  
+}
+
+.about-me{
+  padding: $padding 0;
+  margin-bottom: $margin * 5;
+  p{
+    color: $text-color-2;
+    &.about-me-desc{
+      font-weight: 300;
+      font-size: $font-size * 2;
+      margin-bottom: $margin  * 1.5;
+      strong{
+        color: $text-link;
+      }
+    }
+  }
+}
+
+.experience{
+  margin-bottom: $margin * 6.5;
+}
+.subtitle{
+    @extend %subtitle;
+}
+.skills-area{
+  @extend .experience;
+  .skills-container{
+    width: 25%;
+    float: left;
+    text-align: center;
+    .skills-body{
+      border-radius: 100%;
+      height: 150px;
+      width: 150px;
+      @include linear-gradient(to top, $title-bg, $title-bg 50%, $light-bg 50%, $light-bg );
+      position: relative;
+      margin: 0 auto;
+      p{
+        font-size: $font-size * 3;
+        color: $text-link;
+        font-weight: 300;
+        padding-top: $padding * 2.2;
+      }
+      strong{
+        display: inline-block;
+        font-size: $font-size * 2;
+        color: $text-color-3;
+        padding-top: $padding;
+      }
+
+    }
+    @include tablet{
+        width: 50%;
+      }
+    @include mobile{
+      width: 50%;
+      
+    }
+    @include mobile-xs{
+      width: 100%;
+      float:none;
+    }
+  }
+}
+.interest-area{
+  @extend .experience;
+  ul{
+    margin: $margin * 2.5 0;
+    li{
+      margin-right: $margin * 1.5;
+      span{
+        font-size: $font-size * 2;
+        color: $text-color-3;
+      }
+      &:nth-child(even){
+          span{
+          color: $text-link;
+          font-weight:700;
+        }
+      }
+      @include tablet{
+        display:block;
+        margin-bottom: $margin * 1.5;
+      }
+      @include mobile{
+        display:block;
+        margin-bottom: $margin * 1.5;
+      }
+      @include mobile-xs{
+        display:block;
+        margin-bottom: $margin * 1.5;
+      }
+    }
+  }
+}
+/* ================ The Timeline ================ */
+.timeline {
+  width: 100%;
+  max-width: 100%;
+  padding: 0px;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 1px;
+    top: 10%;
+    left:calc(20% + 20px); 
+    bottom: 0px;
+    background: $text-color-3;
+    @include mobile-xs{
+      top:5%;
+    }
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  } 
+}
+
+.entry {
+  clear: both;
+  text-align: left;
+  position: relative;
+  margin-bottom: $margin * 2;
+  overflow: hidden ;
+  .title {
+    margin-bottom: $margin;
+    float: left;
+    width: 20%;
+    padding: $padding * 1.5;
+    text-align: center;
+    position: relative;
+    border-radius: 30px;
+    background-color: $title-bg;
+    &:before {
+      content: '';
+      position: absolute;
+      width: $dot-diameter;
+      height: $dot-diameter;
+      background-color: $text-color-3;
+      border-radius:100%;
+      top: 50%;
+      right: -$dot-diameter * 1.5;
+      z-index: 99;
+      @include transform(translate(0, -50%));
+    }
+    .year {
+      margin: 0;
+      color: $text-color-3;
+      font-weight: 300;
+    }
+  }
+  .body {
+    float: right;
+    width: 80%;
+    padding-left: $padding * 5;
+    padding-top: $padding * 1.5;
+    .position-title{
+      color: $text-link;
+      small{
+        color: $text-color-3;
+      }
+    }
+    p {
+      font-weight: 300;
+      color: $text-color-3;
+      margin-top: $margin - 5;
+    }
+  }
+}
+

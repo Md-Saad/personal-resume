@@ -1,0 +1,36 @@
+/*=== VARIABLES ===*/
+$primary-color:#00C5CB;
+$secondary-color:#172142;
+
+$text-color: #000;
+$text-color-2: #191919;
+$text-color-3: #3e4853;
+$text-color-light:#fff;
+$text-link: #3d4c80;
+$icon-color: #3e4853;
+$dot-color: #bfbfbf;
+
+$dark-bg:#EAE9E6;
+$light-bg:#fff;
+$title-bg: #ededed;
+
+$facebook-color:#46639f;
+$google-plus-color:#d6513e;
+$twitter-color:#0084b4;
+$dribbble-color:#c73b6f;
+$behance-color:#003ECB;
+$github-color: #24292E;
+
+
+$padding: 10px;
+$margin: 10px;
+$font-size: 12px;
+
+$container-shadow: 0.5rem 0.5rem 2rem 0 rgba(black, 0.2);
+
+$border-width: 20px;
+$dot-diameter: 20px;
+
+@function tint($primary-color, $percentage) {
+  @return mix(white, $primary-color, $percentage);
+}
